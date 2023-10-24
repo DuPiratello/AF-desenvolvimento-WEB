@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --purple-1: #42173C;
+    --purple-2: #431847;
+    --dark-red: #871034;
+    --gray: #3a3757;
+    --dark-gray: #2a2c47;
+    --white: #f2f2f0;
+}
+
+/* CADASTRO */
+.cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--purple-1);
+}
+
+.cadastro .form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--white);
+    border-radius: 4px;
+    padding: 30px 50px;
+
+}
+
+.cadastro .form form select{
+    margin-bottom: 20px;
+}
+
+.cadastro .form form input[type="number"], [type="text"], [type="checkbox"], [type="password"]{
+    margin-bottom: 20px;
+}
+
+.cadastro .form form input[type="submit"]{
+    width: 200px;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+
+/* LOGIN */
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--purple-1);
+}
+
+.login .form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--white);
+    border-radius: 4px;
+    padding: 30px 50px;
+
+}
+
+.login .form form input{
+    margin-bottom: 20px;
+}
+.login .form form input[type="submit"]{
+    width: 200px;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+
+/* DASHBOARD */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 80px;
+    background-color: var(--purple-1);
+    color: var(--white);
+    padding: 0px 50px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.card{
+    width: 250px;
+    padding: 20px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 4px;
+}
+
+.card a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    text-decoration: none;
+    background-color: var(--gray);
+    color: var(--white);
+    padding: 5px 0px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
