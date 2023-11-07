@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --purple-1: #6C63FF;
+    --purple-2: #6b63ff8e;
+    --dark-red: #871034;
+    --gray: #28272e;
+    --dark-gray: #2c2c31;
+    --white: #f2f2f0;
+}
+
+
+/* LOGIN */
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--purple-2);
+}
+
+.login .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 6px;
+
+    height: 500px;
+}
+
+.login  h1{
+    margin-bottom: 50px;
+}
+
+.login h1::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 6px;
+    border-radius: 4px;
+    background-color: var(--purple-1);
+}
+
+.login .image{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    height: 100%;
+    background-color: var(--purple-1);
+}
+
+.login .image img{
+    width: 430px;
+}
+
+.login .form{
+    padding: 0px 60px;
+}
+
+.login .form strong{
+    margin-bottom: 10px;
+    color: var(--gray);
+}
+.login .form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    padding: 30px 50px;
+}
+
+.login .form form a{
+    font-size: 20px;
+    color: var(--purple-1);
+}
+
+.login .form form input{
+    margin-bottom: 20px;
+    border: 1px solid var(--purple-1);
+    background: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+.login .form form input[type="submit"]{
+    width: 200px;
+    padding: 10px 0px;
+    margin-bottom: 40px;
+
+    background: var(--purple-1);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+}

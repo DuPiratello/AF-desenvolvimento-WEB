@@ -8,29 +8,34 @@ require 'db_connection.php';
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aplicação</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./styles/login.css">
 </head>
 
 <body>
 
   <div class="login">
+    <div class="container">
+      <div class="image">
+        <img src="./imagens/login.png">
+      </div>
 
-    <div class="form">
-      
-      <form action="login.php" method="post">
-        <h2 class="text">Faça login para continuar </h2>
+      <div class="form">
 
-        <strong class="text">Email</strong>
-        <input type="text" name="email" placeholder="Login" required>
+        <form action="login.php" method="post">
+          <h1>Fazer Login</h1>
 
-        <strong class="text">Senha</strong>
-        <input type="password" name="password" placeholder="Senha" required>
+          <strong class="text">Email</strong>
+          <input type="text" name="email" placeholder="Email" required>
 
-        <input type="submit" value="Fazer Login">
+          <strong class="text">Senha</strong>
+          <input type="password" name="password" placeholder="Shhhh" required>
 
-        <a id="cadastro" href="cadastro.php">Cadastre-se</a>
-      </form>
+          <input type="submit" value="Fazer Login">
 
+          <a id="cadastro" href="cadastro.php">Cadastre-se</a>
+        </form>
+
+      </div>
     </div>
   </div>
 </body>
