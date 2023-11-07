@@ -37,7 +37,7 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `gender` enum('Feminino','Masculino','Outros') NOT NULL,
   `time` enum('Noite','Manhã','Tarde') NOT NULL,
-  `cadastro_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `register_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `regiao` enum('Salto','Sorocaba','Votorantim','Boituva') DEFAULT NULL,
   `providing_ride` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
@@ -45,7 +45,7 @@ CREATE TABLE `users` (
 
 
 -- Inserir 20 registros com providing_ride = 1
-INSERT INTO `users` (`firstname`, `lastname`, `email`, `number`, `cpf`, `password`, `gender`, `time`, `cadastro_date`, `regiao`, `providing_ride`)
+INSERT INTO `users` (`firstname`, `lastname`, `email`, `number`, `cpf`, `password`, `gender`, `time`, `register_date`, `regiao`, `providing_ride`)
 VALUES
   ('Bob', 'Johnson', 'bob.johnson@example.com', '9876543210', '98765432102', 'password456', 'Masculino', 'Tarde', NOW(), 'Sorocaba', 1),
   ('Charlie', 'Williams', 'charlie.williams@example.com', '5678901234', '56789012303', 'password789', 'Outros', 'Noite', NOW(), 'Votorantim', 1),
