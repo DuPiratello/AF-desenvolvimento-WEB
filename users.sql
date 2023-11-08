@@ -47,7 +47,6 @@ CREATE TABLE `users` (
 -- Inserir 20 registros com providing_ride = 1
 INSERT INTO `users` (`firstname`, `lastname`, `email`, `number`, `cpf`, `password`, `gender`, `time`, `register_date`, `regiao`, `providing_ride`)
 VALUES
-  ('Alice', 'Smith', 'alice.smith@example.com', '1234567890', '12345678901', 'password123', 'Feminino', 'Manhã', NOW(), 'Salto', 1),
   ('Bob', 'Johnson', 'bob.johnson@example.com', '9876543210', '98765432102', 'password456', 'Masculino', 'Tarde', NOW(), 'Sorocaba', 1),
   ('Charlie', 'Williams', 'charlie.williams@example.com', '5678901234', '56789012303', 'password789', 'Outros', 'Noite', NOW(), 'Votorantim', 1),
   ('David', 'Brown', 'david.brown@example.com', '3456789012', '34567890104', 'passwordABC', 'Masculino', 'Manhã', NOW(), 'Boituva', 1),

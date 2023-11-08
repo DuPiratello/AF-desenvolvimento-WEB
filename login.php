@@ -26,12 +26,3 @@ if (mysqli_num_rows($check_login) > 0) {
     exit;
 }
 ?>
-
-<html>
-    <head>
-
-    </head>
-    <body>
-
-    </body>
-</html>
