@@ -162,3 +162,13 @@
     display: flex;
     flex-direction: column;
 }
+@media (max-width:1185px) {
+    .register .container .image{
+        display: none;
+
+    }
+    .register .container {
+        width: 600px;
+    }
+    
+}

@@ -12,7 +12,7 @@
             $number = mysqli_real_escape_string($conn, htmlspecialchars($_POST['number']));
             $cpf = mysqli_real_escape_string($conn, htmlspecialchars($_POST['cpf']));
             $gender = mysqli_real_escape_string($conn, htmlspecialchars($_POST['gender']));
-            $regiao = mysqli_real_escape_string($conn, htmlspecialchars($_POST['time']));
+            $regiao = mysqli_real_escape_string($conn, htmlspecialchars($_POST['regiao']));
             
             $time = mysqli_real_escape_string($conn, htmlspecialchars($_POST['time']));
 

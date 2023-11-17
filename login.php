@@ -1,7 +1,6 @@
 <?php
 
 require 'db_connection.php';
-require 'sessions.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];

@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+   
 }
 
 :root{
@@ -82,9 +83,10 @@
     padding: 30px 50px;
 }
 
-.login .form form a{
+.login .container .form form a{
     font-size: 20px;
     color: var(--purple-1);
+    text-decoration: none;
 }
 
 .login .form form input{
@@ -104,4 +106,12 @@
     border: none;
     border-radius: 4px;
     color: var(--white);
+}
+
+@media (max-width:905px) {
+    .login .container .image{
+        display: none;
+
+    }
+    
 }

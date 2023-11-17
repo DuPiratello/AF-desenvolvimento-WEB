@@ -32,7 +32,7 @@ require 'db_connection.php';
 
           <input type="submit" value="Fazer Login">
 
-          <a id="cadastro" href="cadastro.php">Cadastre-se</a>
+          <a href="cadastro.php">Cadastre-se</a>
         </form>
 
       </div>
