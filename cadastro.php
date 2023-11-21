@@ -34,13 +34,13 @@
 
           <div class="line">
             <div class="fist-item">
-              <label>numero</label>
-              <input type="number" name="number" placeholder="Numero" required>
+              <label>Número</label>
+              <input type="text" id="number" name="number" placeholder="Seu WhatsApp !!!" maxlength="16" required>
             </div>
 
             <div class="second-item">
               <label>CPF</label>
-              <input type="number" name="cpf" placeholder="Usado para limitar n° de contas" required>
+              <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" maxlength="14" required>
             </div>
           </div>
 
@@ -84,12 +84,12 @@
           <div class="line">
             <div class="first-item">
               <label>Email</label>
-              <input type="text" name="email" placeholder="Nome" required>
+              <input type="text" name="email" placeholder="Email" required>
             </div>
 
             <div class="second-item">
               <label>Senha</label>
-              <input type="password" name="password" placeholder="Senha" required>
+              <input type="password" name="password" placeholder="Shhh..." required>
             </div>
           </div>
 
@@ -101,5 +101,35 @@
     </div>
   </div>
 </body>
+
+<script>
+          function formatCpf() {
+ const cpf = document.getElementById('cpf');
+ const cleanCpf = cpf.value.replace(/\D+/g, '');
+  
+ if (cleanCpf.length === 11) {
+    cpf.value = cleanCpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, '$1.$2.$3-$4');
+ } else {
+    cpf.value = cleanCpf;
+ }
+}
+document.getElementById('cpf').addEventListener('input', formatCpf);
+
+
+
+
+          function formatNumber() {
+    const number = document.getElementById('number');
+    const cleanNumber = number.value.replace(/\D+/g, '');
+  
+    if (cleanNumber.length === 11) {
+      number.value = `(${cleanNumber.substr(0, 2)}) ${cleanNumber.substr(2, 1)} ${cleanNumber.substr(3, 4)}-${cleanNumber.substr(7, 4)}`;
+    } else {
+      number.value = cleanNumber;
+    }
+ }
+ document.getElementById('number').addEventListener('input', formatNumber);
+
+</script>
 
 </html>

@@ -36,8 +36,8 @@
     align-items: center;
     background-color: var(--white);
     border-radius: 6px;
-
     height: 500px;
+    box-shadow: 20px 20px 60px 5px var(--gray);
 }
 
 .login  h1{
