@@ -7,7 +7,7 @@ require('sessions.php');
 <html>
 
 <head>
-    <title>Aplicação</title>
+    <title>FACENS CarPool</title>
     <link rel="stylesheet" href="./styles/dashboard.css">
 </head>
 

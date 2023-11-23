@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aplicação</title>
+  <title>FACENS CarPool</title>
   <link rel="stylesheet" href="./styles/register.css">
 </head>
 
@@ -66,7 +66,7 @@
 
             <div class="third-item">
               <label for="regiao">Região:</label>
-              <select name="regiao" id="regiao">
+              <select name="regiao" id="regiao" required>
                 <option value="">Selecione uma região</option>
                 <option value="Salto">Salto</option>
                 <option value="Sorocaba">Sorocaba</option>

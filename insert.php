@@ -28,7 +28,12 @@
                 //verificando se o e-mail ja existe
                 $check_login = mysqli_query($conn, "SELECT `email` FROM `users` WHERE email = '$email'");
                 if (mysqli_num_rows($check_login) > 0) {
-                    echo "<h3>Esse login ja existe, tente outro nome</h3>";
+                    echo "<script> 
+                    alert('Esse login ja existe, tente outro nome');
+                    windows.location.href = 'index.php';
+                    </script>";
+                    exit;
+                    
                 } else
                     {
                         //Inserindo dados na tabela USUARIOS do banco de dados
