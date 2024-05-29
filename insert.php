@@ -13,8 +13,8 @@
             $cpf = mysqli_real_escape_string($conn, htmlspecialchars($_POST['cpf']));
             $gender = mysqli_real_escape_string($conn, htmlspecialchars($_POST['gender']));
             $regiao = mysqli_real_escape_string($conn, htmlspecialchars($_POST['regiao']));
-            
             $time = mysqli_real_escape_string($conn, htmlspecialchars($_POST['time']));
+            
 
             if ($_POST['providing_ride'] == true){
                 $providing_ride = 1;
@@ -30,7 +30,7 @@
                 if (mysqli_num_rows($check_login) > 0) {
                     echo "<script> 
                     alert('Esse login ja existe, tente outro nome');
-                    windows.location.href = 'index.php';
+                    window.location.href = 'cadastro.php';
                     </script>";
                     exit;
                     

@@ -14,10 +14,9 @@ require('sessions.php');
 <header>
     <h1>Caronas na sua região</h1>
     <div class="name_logout">
-        <h2>
+       <h2>
             <?= "Olá, " . $_SESSION['firstname'] . " " . $_SESSION['lastname']; ?>
         </h2>
-
 
         <form action="logout.php" method="post">
             <button class="logout" name="logout" type="submit">
@@ -36,18 +35,27 @@ require('sessions.php');
 <body>
     <div class="container">
         <?php
+       // $query = "SELECT * FROM users WHERE providing_ride = 1 AND regiao = '" . $_SESSION['regiao'] . "'";
+        //$result = $conn->query($query);
 
-        $query = "SELECT * FROM users WHERE providing_ride = 1 AND regiao = '" . $_SESSION['regiao'] . "'";
+        // Se o usuário for um passageiro (providing_ride = 0), mostrar apenas motoristas (providing_ride = 1)
+        // Se o usuário for um motorista (providing_ride = 1), mostrar apenas pasageiros (providing_ride = 0)
+        $userType = $_SESSION['providing_ride']; // Tipo de usuário atual
+        $otherUserType = $userType == 0 ? 1 : 0; // Tipo de usuário oposto
+
+        $query = "SELECT * FROM users WHERE providing_ride = $otherUserType AND regiao = '" . $_SESSION['regiao'] . "'";
         $result = $conn->query($query);
-
         if ($result->num_rows > 0) {
             echo '<div class="cards">';
             while ($row = $result->fetch_assoc()) {
+                $userType = $row['providing_ride'] == 1 ? 'Motorista' : 'Passageiro';
+
                 echo '<div class="card">';
                 echo '<p>Nome: ' . $row['firstname'] . ' ' . $row['lastname'] . '</p>';
                 echo '<p>Horário: ' . $row['time'] . '</p>';
                 echo '<p>Região: ' . $row['regiao'] . '</p>';
                 echo '<p>Número: ' . $row['number'] . '</p>';
+                echo '<p> Tipo: ' . $userType . '</p>';
 
                 // Botão do Zap
                 $whatsappNumber = str_replace([' ', '(', ')', '-'], '', $row['number']);

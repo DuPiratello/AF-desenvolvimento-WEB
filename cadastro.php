@@ -116,8 +116,6 @@
 document.getElementById('cpf').addEventListener('input', formatCpf);
 
 
-
-
           function formatNumber() {
     const number = document.getElementById('number');
     const cleanNumber = number.value.replace(/\D+/g, '');
