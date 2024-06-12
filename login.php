@@ -21,6 +21,7 @@ if (mysqli_num_rows($check_login) > 0) {
         $_SESSION['regiao'] = $validateUser['regiao'];
         $_SESSION['providing_ride'] = $validateUser['providing_ride'];
 
+        
         echo "<script>
         window.location.href = 'dashboard.php';
         </script>";
